@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', 'sans-serif', 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 50%, #4fc3f7 100%);
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    background: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('balai desa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(50%) brightness(50%);
+    z-index: -1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    max-width: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+nav {
+    background: linear-gradient(90deg, #0288d1 0%, #0277bd 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 28px;
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(90deg, #4fc3f7 0%, #29b6f6 100%);
+    color: #2a2a2a;
+    transform: translateY(-3px);
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.container h2 {
+    color: #0277bd;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.product {
+    border: 2px solid #0288d1;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(2, 136, 209, 0.3);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 3px solid #4fc3f7;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.product h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+    color: #0277bd;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #4a4a4a;
+}
+
+.contact-btn {
+    background: linear-gradient(90deg, #0288d1 0%, #0277bd 100%);
+    color: #ffffff;
+    padding: 14px 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 18px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    border: 2px solid #4fc3f7;
+}
+
+.contact-btn:hover {
+    background: #ffffff;
+    color: #0277bd;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: linear-gradient(90deg, #0288d1 0%, #0277bd 100%);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+form button:hover {
+    background: #ffffff;
+    color: #0277bd;
+    box-shadow: 0 5px 15px rgba(2, 136, 209, 0.4);
+}
+
+footer {
+    background: linear-gradient(90deg, #0277bd 0%, #01579b 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    position: relative;
+    width: 100%;
+    font-size: 0.95em;
+    margin-top: 25px;
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        padding: 14px 22px;
+        text-align: left;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 2.2em;
+    }
+    header img {
+        max-width: 100px;
+    }
+    .container {
+        margin: 18px auto;
+        padding: 18px;
+    }
+    .product {
+        padding: 12px;
+    }
+    .contact-btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
